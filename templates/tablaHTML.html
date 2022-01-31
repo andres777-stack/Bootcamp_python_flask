@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table tr td { 
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td><h3>First Name</h3></td>
+            <td><h3>Last Name</h3></td>
+            <td><h3>Full name</h3></td>
+        </tr>
+        {%for i in range(0, 3)%}
+        <tr>
+            <td>{{ usuarios[i].first_name }}</td>
+            <td>{{ usuarios[i].last_name }}</td>
+            <td>{{ usuarios[i].first_name + ' ' + usuarios[i].last_name }}</td>
+        </tr>
+        {%endfor%}
+    </table>
+</body>
+</html>
